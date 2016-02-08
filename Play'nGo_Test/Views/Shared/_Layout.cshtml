@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Play'nGo</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="~/Content/nav.css" rel="stylesheet" />
+    <script src="~/Views/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Views/Scripts/bootstrap.min.js"></script>
+
+    
+
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="~/Content/Images/logo.png" style=" margin 5px;" />
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                        <li><a href="@Url.Action("Index", "Restaurants")">List of Restaurants</a></li>
+                    </ul>        
+                </div>
+            </div><!-- /.container -->
+        </nav><!-- /.navbar -->
+
+        
+    </div><!-- /.container-fluid -->
+
+    @RenderBody()
+</body>
+</html>

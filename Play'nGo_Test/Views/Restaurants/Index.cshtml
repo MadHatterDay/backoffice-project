@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Play_nGo_Test.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+        <link href="~/Content/datatables.min.css" rel="stylesheet" />
+        <script src="~/Scripts/datatables.min.js"></script>
+<h2>List of Restaurants</h2>
+
+<script>
+    $(document).ready(function () {
+        $('#tblRestaurants').DataTable();
+    });
+</script>
+
+<table id="tblRestaurants" class="display" cellspacing="0" width="100%">
+
+    <thead>
+        <tr>
+
+            <th>Name</th>
+            <th>City</th>
+            <th>Contact Number</th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        { 
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.City
+                </td>
+                <td>
+                    @item.Contact
+                </td>
+
+
+            </tr>
+        
+        
+        
+        }
+
+
+
+    </tbody>
+</table>
+
+<script>
+        $('#tblRestaurants')
+            .removeClass('display')
+            .addClass('table table-striped table-bordered');
+</script>
